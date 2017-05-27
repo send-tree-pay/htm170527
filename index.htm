@@ -19,6 +19,10 @@ $(document).ready(function() {
   //函數
 	poi();
 });
+function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+}
 function poi(){
   //
 	var canvas = document.getElementById("myCanvas");
@@ -34,6 +38,7 @@ function poi(){
 	//監聽事件
 	document.getElementById("download01").addEventListener("click", function(){
 		//alert("Hello World!");
+		console.log(this);
 		downloadCanvas(this, 'myCanvas', 'gginin.png');
 	});
 	//遍歷元素01
@@ -89,10 +94,7 @@ function poi(){
 	},1000);
 }
 
-function downloadCanvas(link, canvasId, filename) {
-    link.href = document.getElementById(canvasId).toDataURL();
-    link.download = filename;
-}
+
 
 </script>
 
