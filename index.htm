@@ -40,7 +40,7 @@ function poi(){
 		//alert("Hello World!");
 		console.log(this);
 		downloadCanvas(this, 'myCanvas', 'gginin.png');
-	});
+	}, false);
 	//遍歷元素01
 	const Elements01 = document.querySelectorAll('#input01 > img');
 	//console.log(Elements01);
@@ -108,7 +108,7 @@ width="1000" height="1000"
 </div>
 
 
-<img id="download01" src="download02.png" style="border:1px solid #FF0000;width:100;height:100;">
+<a id="download01"><img src="download02.png" style="border:1px solid #FF0000;width:100;height:100;"></a>
 <img id="layer01" src="face01a01.png" style="border:1px solid #FF0000;width:100;height:100;">
 <img id="layer02" src="face02a01.png" style="border:1px solid #FF0000;width:100;height:100;">
 <img id="layer03" src="face03a01.png" style="border:1px solid #FF0000;width:100;height:100;">
