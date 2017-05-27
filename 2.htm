@@ -1,0 +1,94 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content = "text/html;charset=utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+div {
+border:1px solid #000000;
+}
+</style>
+<script>
+$(document).ready(function() {
+  //全域變數
+	time = new Date();
+  //函數
+	poi();
+});
+function poi(){
+  //
+	var canvas = document.getElementById("myCanvas");
+	canvas.width=800;
+	canvas.height=473;
+	var ctx = canvas.getContext("2d");
+
+	//
+	var time_countdown = setInterval(function(){
+		var img = document.getElementById("layer01");
+		ctx.drawImage(img,0,0,800,473);//xywh
+		var img = document.getElementById("layer02");
+		ctx.drawImage(img,0,0,800,473);//xywh
+		var img = document.getElementById("layer03");
+		ctx.drawImage(img,0,0,800,473);//xywh
+		//
+
+	},1000);
+}
+</script>
+
+</head>
+<body>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div style="display: inline-block;">
+<canvas id="myCanvas"  style="border:1px solid #000000;">
+width="1000" height="1000"
+</canvas>
+</div>
+
+<div id="input" style="border:1px solid #000000;width:600;height:150;overflow: scroll; display:block;">
+<img id="layer01" src="基本無臉.png" style="border:1px solid #FF0000;height:150px;">
+</div>
+
+<div id="input" style="border:1px solid #000000;width:600;height:150;overflow: scroll; display:block;">
+<img id="layer02" src="基本眼睛.png" style="border:1px solid #FF0000;height:150px;">
+</div>
+
+<div id="input" style="border:1px solid #000000;width:600;height:150;overflow: scroll; display:block;">
+<img id="layer03" src="基本嘴巴.png" style="border:1px solid #FF0000;height:150px;">
+</div>
+
+
+<div>aaa</div>
+aaaaaaaa
+overflow: scroll;
+overflow-x:visible;
+overflow-y:hidden;
+display:block;
+display:inline;
+display:inline-block;
+
+<div style="width:100;height:100; display:inline-block;">內容</div >
+<div style="width:100;height:100; display:inline;">內容</div >
+<div style="width:100;height:100; display:block;">內容</div >
+
+
+<div id="input" style="border:1px solid #000000;clear: both;">
+clear: both;
+</div>
+
+<div id="input" style="border:1px solid #000000;width:100px;height:100px; float: left;">
+float: left;
+</div>
+<div id="input" style="border:1px solid #000000;width:100px;height:100px; float: right;">
+float: right;
+</div>
+
+
+</body>
+</html>
